@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Profil Saya</title>
+    <style>
+        body {
+            background-image: linear-gradient(aqua, blue);
+        }
+        #konten {
+            margin-bottom: 20px;
+            color: white;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            h1 {
+                box-shadow: 0 0 8px rgba(0,0,0,0.3);
+                border-radius: 8px;
+                font-family: 'Times New Roman', Times, serif
+            }
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #foto {
+            text-align: center;
+            display: block;
+            margin: 10px auto;
+            width: 150px;
+            height: 175px;
+            object-fit: cover;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0,0,0,0.3);
+        }
+
+    </style>
+</head>
+<body>
+    <h1 style="background-image: linear-gradient(to right, green, yellow); padding: 10px; text-align: center; color: linear_gradient(to right, lightblue, blue);">Halo, Saya Muhammad Haikal!</h1>
+    <img id="foto" src="profilhaikal.jpg" />
+
+    <div id="konten">
+        <h2>Tentang Saya:</h2>
+        <p>Saya adalah mahasiswa yang sedang belajar pengembangan web.</p>
+
+        <h2>Keahlian:</h2>
+        <ul>
+            <li>HTML & CSS</li>
+            <li>JavaScript Dasar</li>
+            <li>PHP Dasar</li>
+        </ul>
+
+        <h2>Kontak:</h2>
+        <p>Email: muhammadhaikal3037@gmail.com</p>
+        <p>Instagram: @m_ha1kal</p>
+    </div>
+
+    <button onclick="toggleKonten()">Sembunyikan Biodata</button>
+
+    <script>
+        const konten = document.getElementById("konten");
+        const tombol = document.querySelector("button");
+
+        function toggleKonten() {
+            if (konten.style.display === "none") {
+                konten.style.display = "block";
+                tombol.textContent = "Sembunyikan Biodata";
+            } else {
+                konten.style.display = "none";
+                tombol.textContent = "Tampilkan Biodata";
+            }
+        }
+    </script>
+</body>
+</html>
